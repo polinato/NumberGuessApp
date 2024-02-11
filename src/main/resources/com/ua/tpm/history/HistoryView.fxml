@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.ClosePath?>
+<?import javafx.scene.shape.LineTo?>
+<?import javafx.scene.shape.MoveTo?>
+<?import javafx.scene.shape.Path?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="240.0" stylesheets="@historyview.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ua.tpm.history.HistoryViewController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="30.0" prefWidth="240.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="240.0" styleClass="back_gr_top">
+                    <children>
+                        <Label fx:id="attempts" prefHeight="20.0" prefWidth="180.0" text="Історія">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></Label>
+                        <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" style="-fx-background-color: transparent;">
+                            <menus>
+                                <Menu mnemonicParsing="false">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#handleButtonActionDeletehistory" text="Видалити історію" />
+                                        <MenuItem mnemonicParsing="false" onAction="#handleButtonActionBack" text="Назад" />
+                                        <MenuItem mnemonicParsing="false" onAction="#handleButtonActionExit" text="Вихід" />
+                                    </items>
+                                    <graphic>
+                                        <Path fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE" styleClass="trio">
+                                            <elements>
+                                                <MoveTo x="20.0" />
+                                                <LineTo x="10.0" y="20.0" />
+                                                <LineTo />
+                                                <ClosePath />
+                                            </elements>
+                                        </Path>
+                                    </graphic>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                    </children>
+                </HBox>
+                <Separator prefWidth="200.0" />
+            </children>
+        </VBox>
+        <ListView fx:id="listview" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="240.0" styleClass="back_gr" VBox.vgrow="NEVER" />
+    </children>
+</VBox>

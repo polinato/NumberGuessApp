@@ -1,0 +1,32 @@
+.trio, SVGPath {
+    -fx-stroke: none;
+    -fx-fill: pink;
+}
+
+Button {
+    -fx-background-color: lightcyan;
+}
+
+Button:hover {
+    -fx-background-color: cyan;
+}
+
+MenuItem {
+    -fx-background-color: chocolate;
+}
+
+Separator {
+    -fx-background-color: yellow;
+}
+
+.back_gr_top {
+    -fx-background-color: chocolate;
+}
+
+.back_gr {
+    -fx-background-color: burlywood;
+}
+
+MenuBar:hover {
+    -fx-background-color: transparent;
+}
